@@ -22,7 +22,7 @@ const Header = () => {
     <header className="flex flex-col sm:flex-row items-center justify-between px-4 sm:px-8 py-3 sm:py-4 bg-white shadow-md sticky top-0 z-50 w-full flex-nowrap gap-2 sm:gap-0">
       <div onClick={()=>{
         router.push("/")
-      }} className="flex flex-col sm:flex-row items-center gap-2 sm:gap-8 flex-nowrap w-full sm:w-auto">
+      }} className="flex flex-col cursor-pointer sm:flex-row items-center gap-2 sm:gap-8 flex-nowrap w-full sm:w-auto">
         <div className="text-xl sm:text-2xl font-bold whitespace-nowrap">MyWebsite</div>
       
       </div>

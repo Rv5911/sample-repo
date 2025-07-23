@@ -16,7 +16,7 @@ const FavouritesPage = () => {
         {favorites.length === 0 ? (
           <div className="text-center text-gray-500 text-base sm:text-lg py-10 sm:py-20">No favorite items yet.</div>
         ) : (
-          <div className="grid grid-cols-1 xs:grid-cols-2 gap-4 sm:gap-8">
+          <div className="grid grid-cols-6 xs:grid-cols-2 gap-4 sm:gap-8">
             {favorites.map(item => (
               <div key={item.id} className="bg-white rounded-xl shadow-lg p-4 sm:p-6 flex flex-col items-center relative w-full">
                 <img src={item.image} alt={item.title} className="w-16 h-16 sm:w-20 sm:h-20 mb-3 sm:mb-4 rounded-full object-cover" />
