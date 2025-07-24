@@ -89,7 +89,7 @@ const LandingPage = () => {
                 Featuring A18 Chip, Liquid Glass, and AI-Powered Innovation
               </div>
               <ul className=" text-base opacity-90 space-y-1 mb-4 list-disc list-inside pl-2">
-                <li>6.9  Super Retina XDR Display</li>
+                <li>6.9 Super Retina XDR Display</li>
                 <li>Triple 48MP Pro Cameras</li>
                 <li>All-day Battery Life</li>
                 <li>Face ID & 5G Connectivity</li>

@@ -16,10 +16,7 @@ interface FeatureSectionProps {
   endImageAlign?: 'left' | 'right';
 }
 
-const FeatureSection: React.FC<FeatureSectionProps> = ({
-  features,
-  theme,
-}) => {
+const FeatureSection: React.FC<FeatureSectionProps> = ({ features, theme }) => {
   return (
     <section className="feature-section max-[900px]:px-6 px-40">
       {features.map((feature, idx) => (
