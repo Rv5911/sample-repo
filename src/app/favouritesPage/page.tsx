@@ -35,7 +35,7 @@ const FavouritesPage = () => {
               >
                 <Image
                   width={100}
-              height={100}
+                  height={100}
                   src={item.image}
                   alt={item.title}
                   className="w-16 h-16 sm:w-20 sm:h-20 mb-3 sm:mb-4 rounded-full object-cover"

@@ -32,9 +32,9 @@ const AddToCart = () => {
                 className={`${theme === 'dark' ? 'bg-gray-800 border-1 text-white' : 'bg-white text-gray-900'}  rounded-xl shadow-lg p-4 sm:p-6 flex flex-col items-center relative w-full`}
               >
                 <Image
-                unoptimized
+                  unoptimized
                   width={100}
-              height={100}
+                  height={100}
                   src={item.image}
                   alt={item.title}
                   className="w-16 h-16 sm:w-20 sm:h-20 mb-3 sm:mb-4 rounded-full object-cover"

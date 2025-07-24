@@ -25,7 +25,7 @@ const ProductCard = ({ item, theme }: { item: Item; theme: string }) => {
     >
       <Image
         width={100}
-              height={100}
+        height={100}
         unoptimized
         src={item.image}
         alt={item.title}
@@ -101,7 +101,6 @@ const LandingPage = () => {
             </div>
             <div className="flex-1 flex justify-center items-center">
               <Image
-              
                 alt="iPhone 16 Pro Max"
                 unoptimized
                 width={100}
@@ -121,7 +120,7 @@ const LandingPage = () => {
               </div>
               <Image
                 width={100}
-              height={100}
+                height={100}
                 src="https://media.tatacroma.com/Croma%20Assets/Small%20Appliances/Home%20Safety%20Security/Images/306821_gzib3o.png"
                 alt="Smart Camera"
                 className="w-28 h-28 object-contain mb-3 rounded-xl border-2 border-white/40 shadow"
@@ -142,9 +141,9 @@ const LandingPage = () => {
                 Galaxy S24 Ultra 5G
               </div>
               <Image
-              width={100}
-              height={100}
-                unoptimized 
+                width={100}
+                height={100}
+                unoptimized
                 src="https://m.media-amazon.com/images/I/71CXhVhpM0L._UF1000,1000_QL80_.jpg"
                 alt="Galaxy S24 Ultra"
                 className="w-28 h-28 object-contain mb-3 rounded-xl border-2 border-white/40 shadow"

@@ -44,7 +44,7 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
             }}
           >
             <Image
-            unoptimized
+              unoptimized
               width={100}
               height={100}
               src={feature.image}
