@@ -19,9 +19,10 @@
   }
 }
 
-/* Removed fixed body margin and padding for responsiveness */
+.smooth-transition {
+  transition: all 3s ease-in-out;
+}
 
-/* FeatureSection styles */
 .feature-section {
   width: 100%;
   margin: 0 auto;
@@ -34,6 +35,8 @@
   margin-bottom: 3rem;
   gap: 2rem;
 }
+
+
 
 .row-reverse {
   flex-direction: row-reverse;
@@ -95,10 +98,8 @@
   }
 }
 
-/* Glassmorphism and Hero Section Enhancements */
 .glass-card {
   backdrop-filter: blur(12px) saturate(120%);
-  background: rgba(255,255,255,0.45);
   box-shadow: 0 8px 32px 0 rgba(31,38,135,0.10);
   border-radius: 1.5rem;
   border: 1px solid rgba(255,255,255,0.18);
@@ -137,5 +138,4 @@
     padding: 1rem;
   }
 }
-
 

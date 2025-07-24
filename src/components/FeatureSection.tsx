@@ -11,12 +11,13 @@ interface Feature {
 interface FeatureSectionProps {
   features: Feature[];
   endImage?: string;
+  theme?: string;
   endImageAlign?: "left" | "right";
 }
 
-const FeatureSection: React.FC<FeatureSectionProps> = ({ features, endImage, endImageAlign = "right" }) => {
+const FeatureSection: React.FC<FeatureSectionProps> = ({ features, endImage, endImageAlign = "right", theme }) => {
   return (
-    <section className="feature-section px-40">
+    <section className="feature-section max-[900px]:px-6 px-40">
       {features.map((feature, idx) => (
         <div
           key={feature.title}
@@ -32,15 +33,15 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({ features, endImage, end
           </div>
           <div className="feature-info" style={{ padding: '2rem 2rem', flex: 1 }}>
             <h3 style={{ fontSize: '2.2rem', marginBottom: '1rem' }}>{feature.title}</h3>
-            <p style={{ fontSize: '1.2rem', color: '#444', marginBottom: '1.2rem' }}>{feature.description}</p>
+            <p style={{ fontSize: '1.2rem', color: theme === 'dark' ? '#fff' : '#444', marginBottom: '1.2rem' }}>{feature.description}</p>
             {feature.highlights && feature.highlights.length > 0 && (
-              <ul style={{ fontSize: '1.1rem', color: '#555', marginBottom: '1.2rem', paddingLeft: '1.2rem', listStyle: 'disc' }}>
+              <ul style={{ fontSize: '1.1rem', color: theme === 'dark' ? '#fff' : '#444', marginBottom: '1.2rem', paddingLeft: '1.2rem', listStyle: 'disc' }}>
                 {feature.highlights.map((h, i) => (
                   <li key={i}>{h}</li>
                 ))}
               </ul>
             )}
-            {feature.extraInfo && <div className="feature-extra-info">{feature.extraInfo}</div>}
+            {feature.extraInfo && <div className="feature-extra-info" >{feature.extraInfo}</div>}
           </div>
         </div>
       ))}
