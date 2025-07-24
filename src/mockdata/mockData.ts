@@ -1,4 +1,4 @@
-import { Item } from '@/store/zustandStore';
+import { Item } from '@/store/useStore';
 
 export const features = [
   {

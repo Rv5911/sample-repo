@@ -1,8 +1,9 @@
 'use client';
 import { useThemeStore } from '@/store/useThemeStore';
-import { useStore } from '@/store/zustandStore';
+import { useStore } from '@/store/useStore';
 import React from 'react';
 import { FaHeart, FaTrash } from 'react-icons/fa';
+import Image from 'next/image';
 
 const FavouritesPage = () => {
   const { favorites, removeFromFavorites } = useStore();
@@ -32,10 +33,13 @@ const FavouritesPage = () => {
                 key={item.id}
                 className={`${theme === 'dark' ? 'bg-gray-800 border-1 text-white' : 'bg-white text-gray-900'}  rounded-xl shadow-lg p-4 sm:p-6 flex flex-col items-center relative w-full`}
               >
-                <img
+                <Image
+                  width={100}
+              height={100}
                   src={item.image}
                   alt={item.title}
                   className="w-16 h-16 sm:w-20 sm:h-20 mb-3 sm:mb-4 rounded-full object-cover"
+                  unoptimized
                 />
                 <h3 className="font-semibold text-base sm:text-lg mb-1 sm:mb-2 text-center">
                   {item.title}

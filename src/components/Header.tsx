@@ -1,15 +1,16 @@
 'use client';
 import React from 'react';
 import { FaHeart, FaShoppingCart } from 'react-icons/fa';
-import { useStore } from '../store/zustandStore';
+import { MdDarkMode, MdLightMode } from 'react-icons/md';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import { MdDarkMode, MdLightMode } from 'react-icons/md';
+
 import { useThemeStore } from '@/store/useThemeStore';
+import { useStore } from '@/store/useStore';
 
 const Header = () => {
-  const favCount = useStore((state: any) => state.favorites.length);
-  const cartCount = useStore((state: any) => state.cart.length);
+  const favCount = useStore((state) => state.favorites.length);
+  const cartCount = useStore((state) => state.cart.length);
   const { theme, setTheme } = useThemeStore();
   const router = useRouter();
 
@@ -29,7 +30,9 @@ const Header = () => {
 
   return (
     <header
-      className={`${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-white'} flex flex-col sm:flex-row items-center justify-between px-4 sm:px-8 py-3 sm:py-4 shadow-md sticky top-0 z-50 w-full flex-nowrap gap-2 sm:gap-0`}
+      className={`${
+        theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-white'
+      } flex flex-col sm:flex-row items-center justify-between px-4 sm:px-8 py-3 sm:py-4 shadow-md sticky top-0 z-50 w-full flex-nowrap gap-2 sm:gap-0`}
     >
       <div
         onClick={() => {
@@ -60,10 +63,8 @@ const Header = () => {
         </nav>
 
         <div
-          className="cursor-pointer  hover:scale-110"
-          onClick={() => {
-            setTheme(theme === 'light' ? 'dark' : 'light');
-          }}
+          className="cursor-pointer hover:scale-110"
+          onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
           title="Toggle Theme"
         >
           {theme === 'dark' ? (

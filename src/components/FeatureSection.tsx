@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 interface Feature {
@@ -42,7 +43,10 @@ const FeatureSection: React.FC<FeatureSectionProps> = ({
               minWidth: 0,
             }}
           >
-            <img
+            <Image
+            unoptimized
+              width={100}
+              height={100}
               src={feature.image}
               alt={feature.title}
               style={{

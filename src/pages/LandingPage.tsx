@@ -1,7 +1,7 @@
 'use client';
 import React, { useRef } from 'react';
 import { FaHeart, FaShoppingCart } from 'react-icons/fa';
-import { useStore, Item } from '../store/zustandStore';
+import { useStore, Item } from '../store/useStore';
 import FeatureSection from '../components/FeatureSection';
 import { featureIcons, features, products } from '@/mockdata/mockData';
 import { useThemeStore } from '@/store/useThemeStore';
@@ -23,7 +23,10 @@ const ProductCard = ({ item, theme }: { item: Item; theme: string }) => {
     <div
       className={` glass-card ${theme === 'dark' ? 'bg-gray-800 border-2 text-white' : 'bg-white text-gray-900'} rounded-xl shadow-lg p-4 sm:p-6 flex flex-col items-center relative w-full`}
     >
-      <img
+      <Image
+        width={100}
+              height={100}
+        unoptimized
         src={item.image}
         alt={item.title}
         className="w-40 h-40 sm:mb-4 rounded-full object-cover"
@@ -98,6 +101,7 @@ const LandingPage = () => {
             </div>
             <div className="flex-1 flex justify-center items-center">
               <Image
+              
                 alt="iPhone 16 Pro Max"
                 unoptimized
                 width={100}
@@ -115,10 +119,13 @@ const LandingPage = () => {
               <div className="text-xl font-semibold  mb-3">
                 Smart Security Home Camera
               </div>
-              <img
+              <Image
+                width={100}
+              height={100}
                 src="https://media.tatacroma.com/Croma%20Assets/Small%20Appliances/Home%20Safety%20Security/Images/306821_gzib3o.png"
                 alt="Smart Camera"
                 className="w-28 h-28 object-contain mb-3 rounded-xl border-2 border-white/40 shadow"
+                unoptimized
               />
               <div className=" text-base mb-2">
                 Save up to <span className="text-blue-700 font-bold">$450</span>
@@ -134,7 +141,10 @@ const LandingPage = () => {
               <div className="text-xl font-semibold  mb-3">
                 Galaxy S24 Ultra 5G
               </div>
-              <img
+              <Image
+              width={100}
+              height={100}
+                unoptimized 
                 src="https://m.media-amazon.com/images/I/71CXhVhpM0L._UF1000,1000_QL80_.jpg"
                 alt="Galaxy S24 Ultra"
                 className="w-28 h-28 object-contain mb-3 rounded-xl border-2 border-white/40 shadow"
