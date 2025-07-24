@@ -1,11 +1,11 @@
-"use client";
-import React, { useRef } from "react";
-import { FaHeart, FaShoppingCart } from "react-icons/fa";
-import { useStore, Item } from "../store/zustandStore";
-import FeatureSection from "../components/FeatureSection";
-import { featureIcons, features, products } from "@/mockdata/mockData";
-import { useThemeStore } from "@/store/useThemeStore";
-import Image from "next/image";
+'use client';
+import React, { useRef } from 'react';
+import { FaHeart, FaShoppingCart } from 'react-icons/fa';
+import { useStore, Item } from '../store/zustandStore';
+import FeatureSection from '../components/FeatureSection';
+import { featureIcons, features, products } from '@/mockdata/mockData';
+import { useThemeStore } from '@/store/useThemeStore';
+import Image from 'next/image';
 
 const ProductCard = ({ item, theme }: { item: Item; theme: string }) => {
   const {
@@ -20,7 +20,9 @@ const ProductCard = ({ item, theme }: { item: Item; theme: string }) => {
   const isCart = cart.some((c) => c.id === item.id);
 
   return (
-    <div className={` glass-card ${theme === "dark" ? "bg-gray-800 border-2 text-white" : "bg-white text-gray-900"} rounded-xl shadow-lg p-4 sm:p-6 flex flex-col items-center relative w-full`}>
+    <div
+      className={` glass-card ${theme === 'dark' ? 'bg-gray-800 border-2 text-white' : 'bg-white text-gray-900'} rounded-xl shadow-lg p-4 sm:p-6 flex flex-col items-center relative w-full`}
+    >
       <img
         src={item.image}
         alt={item.title}
@@ -32,7 +34,7 @@ const ProductCard = ({ item, theme }: { item: Item; theme: string }) => {
       <div className="flex gap-2 sm:gap-4 mt-2">
         <button
           className={`p-2 cursor-pointer hover:scale-125 transition-all duration-300 ease-in-out  rounded-full border ${
-            isFav ? "bg-red-100 text-red-500" : "bg-gray-100 text-gray-500"
+            isFav ? 'bg-red-100 text-red-500' : 'bg-gray-100 text-gray-500'
           }`}
           onClick={() =>
             isFav ? removeFromFavorites(item.id) : addToFavorites(item)
@@ -42,7 +44,7 @@ const ProductCard = ({ item, theme }: { item: Item; theme: string }) => {
         </button>
         <button
           className={`p-2 cursor-pointer hover:scale-125 transition-all duration-300 ease-in-out rounded-full border ${
-            isCart ? "bg-blue-100 text-blue-500" : "bg-gray-100 text-gray-500"
+            isCart ? 'bg-blue-100 text-blue-500' : 'bg-gray-100 text-gray-500'
           }`}
           onClick={() => (isCart ? removeFromCart(item.id) : addToCart(item))}
         >
@@ -60,11 +62,19 @@ const LandingPage = () => {
 
   return (
     <main>
-      <section className={` ${theme === "dark" ? "bg-gray-900 text-white" : "bg-gradient-to-br from-blue-50 via-white to-purple-100"} relative flex flex-col items-center w-full py-10  overflow-hidden`}>
-        <div className={"absolute -top-24 -left-24 w-96 h-96  rounded-full opacity-30 blur-3xl z-0"} />
+      <section
+        className={` ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-gradient-to-br from-blue-50 via-white to-purple-100'} relative flex flex-col items-center w-full py-10  overflow-hidden`}
+      >
+        <div
+          className={
+            'absolute -top-24 -left-24 w-96 h-96  rounded-full opacity-30 blur-3xl z-0'
+          }
+        />
         <div className="absolute -bottom-32 right-0 w-96 h-96 bg-blue-200 rounded-full opacity-20 blur-3xl z-0" />
         <div className="flex flex-col md:flex-row gap-12 w-full  z-10 max-[900px]:px-6 px-40">
-          <div className={`flex-1 glass-card rounded-2xl p-14 flex flex-row items-center  relative shadow-2xl overflow-hidden hero-main-card ${theme === "dark" ? " text-white" : "bg-white text-gray-900"}`}>
+          <div
+            className={`flex-1 glass-card rounded-2xl p-14 flex flex-row items-center  relative shadow-2xl overflow-hidden hero-main-card ${theme === 'dark' ? ' text-white' : 'bg-white text-gray-900'}`}
+          >
             <div className="flex-1 flex flex-col justify-center">
               <div className=" text-sm mb-2 font-semibold tracking-widest">
                 LIMITED EDITION
@@ -84,23 +94,24 @@ const LandingPage = () => {
                 <li>Starting at $1,999</li>
                 <li>Pre-order now for exclusive accessories</li>
                 <li>Available in Space Black, Silver, Gold, and Deep Purple</li>
-
               </ul>
             </div>
             <div className="flex-1 flex justify-center items-center">
               <Image
-              alt="iPhone 16 Pro Max"
-              unoptimized
-              width={100}
-              height={100}
-              src="/iphoneImage.webp"
-              className="w-64 md:w-96  rounded-xl shadow-2xl object-contain bg-transparent"
-              style={{ zIndex: 1 }}
-            />
+                alt="iPhone 16 Pro Max"
+                unoptimized
+                width={100}
+                height={100}
+                src="/iphoneImage.webp"
+                className="w-64 md:w-96  rounded-xl shadow-2xl object-contain bg-transparent"
+                style={{ zIndex: 1 }}
+              />
             </div>
           </div>
           <div className="flex flex-col gap-8 w-full md:w-[380px]">
-            <div className={`${theme === "dark" ? " text-white" : "bg-white text-gray-900"} flex-1 glass-card rounded-2xl p-8 flex flex-col justify-between items-start shadow-lg border border-blue-200/40 transition-all duration-200 `}>
+            <div
+              className={`${theme === 'dark' ? ' text-white' : 'bg-white text-gray-900'} flex-1 glass-card rounded-2xl p-8 flex flex-col justify-between items-start shadow-lg border border-blue-200/40 transition-all duration-200 `}
+            >
               <div className="text-xl font-semibold  mb-3">
                 Smart Security Home Camera
               </div>
@@ -149,9 +160,7 @@ const LandingPage = () => {
               <span className="text-4xl mb-2 group-hover:scale-110 transition-transform">
                 {icon}
               </span>
-              <span className="font-semibold  text-lg">
-                {title}
-              </span>
+              <span className="font-semibold  text-lg">{title}</span>
               <span className="text-gray-500 text-base">{desc}</span>
             </div>
           ))}
@@ -163,18 +172,22 @@ const LandingPage = () => {
         className="relative py-10 sm:py-20 px-2 sm:px-8"
         style={{
           backgroundImage:
-            "url(https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=1200&q=80)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+            'url(https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=1200&q=80)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
         }}
       >
-        <div className={`absolute inset-0 ${theme === "dark" ? "bg-gray-800 text-white" : "bg-white/70 text-black"}  backdrop-blur-sm`}/>
-        <div className={`relative z-10 ${theme === "dark" ? " text-white" : " text-black"}`}>
+        <div
+          className={`absolute inset-0 ${theme === 'dark' ? 'bg-gray-800 text-white' : 'bg-white/70 text-black'}  backdrop-blur-sm`}
+        />
+        <div
+          className={`relative z-10 ${theme === 'dark' ? ' text-white' : ' text-black'}`}
+        >
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-10 text-center">
             Features
           </h2>
           <FeatureSection
-          theme={theme}
+            theme={theme}
             features={features}
             endImage="https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=800&q=80"
             endImageAlign="right"
@@ -185,7 +198,7 @@ const LandingPage = () => {
       <div
         id="products-section"
         ref={productsRef}
-        className={`relative py-10 sm:py-20 px-2 sm:px-8 ${theme === "dark" ? " text-white bg-gray-800" : " text-black bg-gray-200"} `}
+        className={`relative py-10 sm:py-20 px-2 sm:px-8 ${theme === 'dark' ? ' text-white bg-gray-800' : ' text-black bg-gray-200'} `}
       >
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-10 text-center">

@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React from 'react';
 import { FaHeart, FaShoppingCart } from 'react-icons/fa';
 import { useStore } from '../store/zustandStore';
@@ -28,7 +28,9 @@ const Header = () => {
   };
 
   return (
-    <header className={`${theme === "dark" ? "bg-gray-900 text-white" : "bg-white"} flex flex-col sm:flex-row items-center justify-between px-4 sm:px-8 py-3 sm:py-4 shadow-md sticky top-0 z-50 w-full flex-nowrap gap-2 sm:gap-0`}>
+    <header
+      className={`${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-white'} flex flex-col sm:flex-row items-center justify-between px-4 sm:px-8 py-3 sm:py-4 shadow-md sticky top-0 z-50 w-full flex-nowrap gap-2 sm:gap-0`}
+    >
       <div
         onClick={() => {
           router.push('/');
@@ -37,8 +39,8 @@ const Header = () => {
       >
         <div className="text-xl sm:text-2xl flex items-center gap-4 font-bold whitespace-nowrap">
           <Image src="/logo.png" alt="logo" width={50} height={50} />
-          
-          Gadgets Zone</div>
+          Gadgets Zone
+        </div>
       </div>
 
       <div className="flex items-center gap-4 sm:gap-6 flex-nowrap">
@@ -57,26 +59,26 @@ const Header = () => {
           </button>
         </nav>
 
-         <div
-            className="cursor-pointer  hover:scale-110"
-            onClick={() => {
-              setTheme(theme === 'light' ? 'dark' : 'light');
-            }}
-            title="Toggle Theme"
-          >
-            {
-              theme === 'dark' ? <MdLightMode size={24} /> :   <MdDarkMode size={24} />
-            }
-          
-          </div>
+        <div
+          className="cursor-pointer  hover:scale-110"
+          onClick={() => {
+            setTheme(theme === 'light' ? 'dark' : 'light');
+          }}
+          title="Toggle Theme"
+        >
+          {theme === 'dark' ? (
+            <MdLightMode size={24} />
+          ) : (
+            <MdDarkMode size={24} />
+          )}
+        </div>
 
         <div
           className="relative cursor-pointer hover:scale-110"
           onClick={() => router.push('/favouritesPage')}
           title="View Favorites"
         >
-
-          <FaHeart size={24}  />
+          <FaHeart size={24} />
           {favCount > 0 && (
             <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full px-1.5 py-0.5 min-w-[18px] text-center">
               {favCount}
@@ -89,7 +91,7 @@ const Header = () => {
           onClick={() => router.push('/addToCart')}
           title="View Cart"
         >
-          <FaShoppingCart size={24} className='text-blue-500' />
+          <FaShoppingCart size={24} className="text-blue-500" />
           {cartCount > 0 && (
             <span className="absolute -top-2 -right-2 bg-blue-500 text-white text-xs rounded-full px-1.5 py-0.5 min-w-[18px] sm:min-w-[20px] text-center">
               {cartCount}
