@@ -18,8 +18,6 @@ interface FeatureSectionProps {
 
 const FeatureSection: React.FC<FeatureSectionProps> = ({
   features,
-  endImage,
-  endImageAlign = 'right',
   theme,
 }) => {
   return (

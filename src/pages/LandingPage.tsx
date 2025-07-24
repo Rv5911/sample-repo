@@ -89,7 +89,7 @@ const LandingPage = () => {
                 Featuring A18 Chip, Liquid Glass, and AI-Powered Innovation
               </div>
               <ul className=" text-base opacity-90 space-y-1 mb-4 list-disc list-inside pl-2">
-                <li>6.9" Super Retina XDR Display</li>
+                <li>6.9  Super Retina XDR Display</li>
                 <li>Triple 48MP Pro Cameras</li>
                 <li>All-day Battery Life</li>
                 <li>Face ID & 5G Connectivity</li>
@@ -152,7 +152,7 @@ const LandingPage = () => {
                 Save up to <span className="text-blue-700 font-bold">$600</span>
               </div>
               <ul className=" text-base space-y-1 mb-2 list-disc list-inside pl-2">
-                <li>6.8" QHD+ Dynamic AMOLED</li>
+                <li>6.8 QHD+ Dynamic AMOLED</li>
                 <li>200MP Quad Camera</li>
                 <li>Snapdragon 8 Gen 3</li>
                 <li>5000mAh Battery</li>
