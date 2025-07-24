@@ -5,5 +5,3 @@
 echo "🧹 Formatting code with Prettier..."
 npm run format
 
-echo "✅ Running lint-staged on staged files..."
-npx lint-staged
